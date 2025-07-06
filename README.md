@@ -18,7 +18,7 @@ A sample flight dataset containing features like Airline, Source, Destination, T
 
 1. Clone the repo:
 
-git clone https://github.com/yourusername/flight-fare-prediction.git
+git clone https://github.com/kiahvaidya/FlightFarePrediction.git
 cd flight-fare-prediction
 
 2.Install dependencies:
