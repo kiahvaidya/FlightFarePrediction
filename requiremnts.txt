@@ -2,5 +2,5 @@ streamlit
 pandas
 numpy
 requests
-compress-pickle
+git+https://github.com/karldw/compress_pickle.git
 
