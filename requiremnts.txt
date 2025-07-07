@@ -2,5 +2,5 @@ streamlit
 pandas
 numpy
 requests
-git+https://github.com/karldw/compress_pickle.git
-
+scikit-learn
+gdown
