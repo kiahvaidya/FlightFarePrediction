@@ -1,3 +1,0 @@
-streamlit
-compress-pickle
-requests
