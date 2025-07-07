@@ -5,6 +5,7 @@ import pickle
 import lzma
 import os
 import subprocess
+import gdown
 from datetime import datetime
 
 # Streamlit config
@@ -12,15 +13,16 @@ st.set_page_config(page_title="Flight Fare Predictor", page_icon="✈️", layou
 st.title("✈️ Flight Fare Predictor")
 st.write("Enter flight details to get the estimated fare.")
 
-# Model path
 model_path = "model.lzma"
+file_id = "YUeTITr2t61ldmCnEZxp1cWCngg3mYvG"
+gdown_url = f"https://drive.google.com/uc?id={file_id}"
 
-# Download model from Google Drive using gdown
+# Download if missing
 if not os.path.exists(model_path):
     with st.spinner("📥 Downloading model..."):
-        gdown_url = "https://drive.google.com/file/d/1YUeTITr2t61ldmCnEZxp1cWCngg3mYvG/view?usp=drive_link"
-        subprocess.run(["gdown", gdown_url, "-O", model_path], check=True)
+        gdown.download(gdown_url, model_path, quiet=False)
         st.success("✅ Model downloaded.")
+
 
 # Load model with pickle + lzma
 with lzma.open(model_path, "rb") as f:
