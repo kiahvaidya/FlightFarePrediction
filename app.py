@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import compress_pickle
 import os
 import requests
 from datetime import datetime
@@ -23,7 +22,12 @@ if not os.path.exists(model_path):
         st.success("✅ Model downloaded.")
        
 # Load model
-model = compress_pickle.load(model_path, compression="lzma")
+import lzma
+import pickle
+
+with lzma.open("model.lzma", "rb") as f:
+    model = pickle.load(f)
+
 
 # Trained columns
 trained_columns = ['Class', 'Total_stops', 'Duration_in_hours', 'Days_left', 'day_Friday', 'day_Monday',
