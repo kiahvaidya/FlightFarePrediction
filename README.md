@@ -1,6 +1,6 @@
 # ✈️ Flight Fare Prediction
 
-This project uses machine learning to predict flight fares based on airline, source, destination, duration, and other flight-related features.
+This project uses machine learning to predict flight fares based on user-provided flight details and suggests the best booking date to get the lowest fare.
 
 ## 🔧 Algorithms Used
 - Random Forest Regressor ✅ (Best Performing)
@@ -21,9 +21,21 @@ A sample flight dataset containing features like Airline, Source, Destination, T
 git clone https://github.com/kiahvaidya/FlightFarePrediction.git
 cd flight-fare-prediction
 
-2.Install dependencies:
+Install dependencies:
 
 pip install -r requirements.txt
 
-Open and run the notebook:
-jupyter notebook flightfare.ipynb
+Ensure rf_flight_model.xz is in the project directory.
+
+The app can automatically download it if missing.
+
+
+Notes
+
+Predictions are based on historical data and the trained model; actual fares may vary.
+
+Flight date must be today or a future date.
+
+Only major Indian cities are supported.
+
+
