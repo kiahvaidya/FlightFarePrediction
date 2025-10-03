@@ -18,16 +18,16 @@ A sample flight dataset containing features like Airline, Source, Destination, T
 
 1. Clone the repo:
 
-git clone https://github.com/kiahvaidya/FlightFarePrediction.git
-cd flight-fare-prediction
+ git clone https://github.com/kiahvaidya/FlightFarePrediction.git
+ cd flight-fare-prediction
 
 2. Install dependencies:
 
-pip install -r requirements.txt
+ pip install -r requirements.txt
 
-Ensure rf_flight_model.xz is in the project directory.
+ Ensure rf_flight_model.xz is in the project directory.
 
-The app can automatically download it if missing.
+ The app can automatically download it if missing.
 
 
 ## 🗒️ Notes
